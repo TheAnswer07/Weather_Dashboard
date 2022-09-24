@@ -33,8 +33,10 @@ Thanks to Michael Scharfas (2017mike) for all the considerable support connected
 
 ### Features:
 
-Using Materialize CSS for styling
-Using Open Weather Map API
+Materialize CSS for styling | 
+Open Weather Map API | 
+Search area to enter a city in order to get information about its local Temperature (in °F), Humidity (in %), Wind speed (in mph) and UV index 
+
 
 
 ### Contribution:
@@ -44,7 +46,7 @@ You can contribute to this project by accessing my GitHub page.
 [GitHub](https://github.com/TheAnswer07)
 
 ### Links:
-[GitHub App Link](https://)
+[GitHub App Link](https://theanswer07.github.io/Weather_Dashboard/)
 
 ### Screenshots:
 
