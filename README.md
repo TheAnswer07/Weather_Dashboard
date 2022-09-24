@@ -13,9 +13,10 @@
 * [GitHub Profile Link](#github-profile)
 * [GitHub App Link](#links)
 * [Screenshots:](#screenshots)
-    1. [x](#x)
-    2. [y](#y)
-    3. [z](#z)
+    1. [Weather dashboard landing page](#Weather-dashboard-landing-page)
+    2. [Weather dashboard with data locally stored](#Weather-dashboard-with-data-locally-stored)
+    3. [Weather dashboard with other clickable cities list](#Weather-dashboard-with-other-clickable-cities-list)
+    4. [Weather dashboard for next couple of days](#Weather-dashboard-for-next-couple-of-days)
 
 
 
@@ -50,14 +51,18 @@ You can contribute to this project by accessing my GitHub page.
 
 ### Screenshots:
 
-1. X
+1. Weather dashboard landing page
 
-![x](screenshots/Empty%20app%20visual.png "x")
+![Weather dashboard landing page](screenshots/Weather%20dashboard%20landing%20page.png "Weather dashboard landing page")
 
-2. Y
+2. Weather dashboard with data locally stored
 
-![y](screenshots/App%20with%20data.png "y")
+![Weather dashboard with data locally stored](screenshots/Weather%20dashboard%20with%20data%20locally%20stored.png "Weather dashboard with data locally stored")
 
-3. Z
+3. Weather dashboard with other clickable cities list
 
-![z](screenshots/App%20with%20data%20locally%20stored.png "z")
+![Weather dashboard with other clickable cities list](screenshots/Weather%20dashboard%20with%20other%20clickable%20cities%20list.png "Weather dashboard with other clickable cities list")
+
+4. Weather dashboard for next couple of days
+
+![Weather dashboard for next couple of days](screenshots/Weather%20dashboard%20for%20next%20couple%20of%20days.png "Weather dashboard for next couple of days")
