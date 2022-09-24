@@ -17,8 +17,8 @@
             </div>
             <div class="row">
                 <div class="input-field col s6">
-                    <input value="Alameda" id="city" type="text" class="validate">
-                    <label class="active" for="first_name2">City</label>
+                    <input value="Alameda" id="cityName" type="text" class="validate">
+                    <label class="active" for="first_name2">City Name</label>
                 </div>
                 <a id="searchBtn" class="waves-effect waves-light btn">Search</a>
             </div>
@@ -26,17 +26,23 @@
 
 
 
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script>
             document.getElementById("searchBtn").addEventListener("click", event => {
-                let city = document.getElementById("city").value;
-                    console.log(city);
-                axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=98f807f4da3655933cba183dce7abb0f`)
-                .then(res => {
-                    console.log(res.data);
-                })
+                let cityName = document.getElementById("cityName").value;
+                console.log(cityName);
+                axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=20948a341240bc75635af713a3f5df69`)
+                    .then(res => {
+                        console.log(res.data);
+                        let lat = res.data.city.coord.lat;
+                        let lon = res.data.city.coord.lon;
+
+                axios.get(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=20948a341240bc75635af713a3f5df69`)
+                    .then(resp => {
+                        console.log(resp.data);
+                        });
+                    })
             });
         </script>
     </body>
