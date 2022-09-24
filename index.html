@@ -7,6 +7,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <style>
+            .green {
+                background-color: rgb(31, 229, 41);
+            }
+
+            .yellow {
+                background-color: rgb(241, 245, 16);
+            }
+
+            .red {
+                background-color: rgb(245, 39, 16);
+            }
+
+        </style>
     </head>
 
     <body>
@@ -22,6 +36,12 @@
                 </div>
                 <a id="searchBtn" class="waves-effect waves-light btn">Search</a>
             </div>
+            <div class="row">
+                <div id="currentDiv"></div>
+            </div>
+            <div class="row">
+                <div class="fiveDay"></div>
+            </div>
         </div>
 
 
@@ -32,16 +52,45 @@
             document.getElementById("searchBtn").addEventListener("click", event => {
                 let cityName = document.getElementById("cityName").value;
                 console.log(cityName);
-                axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=20948a341240bc75635af713a3f5df69`)
+                axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=imperial&appid=20948a341240bc75635af713a3f5df69`)
                     .then(res => {
                         console.log(res.data);
                         let lat = res.data.city.coord.lat;
                         let lon = res.data.city.coord.lon;
 
-                axios.get(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=20948a341240bc75635af713a3f5df69`)
-                    .then(resp => {
-                        console.log(resp.data);
-                        });
+                        axios.get(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=20948a341240bc75635af713a3f5df69`)
+                            .then(resp => {
+                                console.log(resp.data);
+                                let uvi;
+                                if (resp.data.current.uvi < 2) {
+                                    uvi = 'green';
+                                } else if (resp.data.current.uvi < 5) {
+                                    uvi = 'yellow';
+                                } else {
+                                    uvi = 'red';
+                                }
+                                document.getElementById("currentDiv").innerHTML = `
+                                <div class="row">
+                                    <div class="col s12 m7">
+                                    <div class="card">
+                                        <div class="card-image">
+                                        <img src="http://openweathermap.org/img/wn/${res.data.list[0].weather[0].icon}@4x.png">
+                                        <span class="card-title">${res.data.city.name}</span>
+                                        </div>
+                                        <div class="card-content">
+                                        <p>${res.data.list[0].dt_txt}</p>
+                                        <p> Temp: ${res.data.list[0].main.temp} °F</p>
+                                        <p> Humidity: ${res.data.list[0].main.humidity} %</p>
+                                        <p> Wind speed: ${res.data.list[0].wind.speed} mph</p>
+                                        <p class="${uvi}"> uvi: ${resp.data.current.uvi}</p>
+                                        </div>
+                                        <div class="card-action">
+                                        <a href="#">This is a link</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>`
+                            })
                     })
             });
         </script>

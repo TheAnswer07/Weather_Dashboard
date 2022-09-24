@@ -33,7 +33,9 @@ Thanks to Michael Scharfas (2017mike) for all the considerable support connected
 
 ### Features:
 
-X
+Using Materialize CSS for styling
+Using Open Weather Map API
+
 
 ### Contribution:
 You can contribute to this project by accessing my GitHub page.
