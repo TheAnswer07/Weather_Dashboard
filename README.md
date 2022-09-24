@@ -51,18 +51,18 @@ You can contribute to this project by accessing my GitHub page.
 
 ### Screenshots:
 
-1. Weather dashboard landing page
+1. Weather dashboard landing page:
 
 ![Weather dashboard landing page](screenshots/Weather%20dashboard%20landing%20page.png "Weather dashboard landing page")
 
-2. Weather dashboard with data locally stored
+2. Weather dashboard with data locally stored:
 
 ![Weather dashboard with data locally stored](screenshots/Weather%20dashboard%20with%20data%20locally%20stored.png "Weather dashboard with data locally stored")
 
-3. Weather dashboard with other clickable cities list
+3. Weather dashboard with other clickable cities list:
 
 ![Weather dashboard with other clickable cities list](screenshots/Weather%20dashboard%20with%20other%20clickable%20cities%20list.png "Weather dashboard with other clickable cities list")
 
-4. Weather dashboard for next couple of days
+4. Weather dashboard for next couple of days:
 
 ![Weather dashboard for next couple of days](screenshots/Weather%20dashboard%20for%20next%20couple%20of%20days.png "Weather dashboard for next couple of days")
