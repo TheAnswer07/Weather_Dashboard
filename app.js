@@ -38,7 +38,7 @@ const showCard = (weatherDataArray) => {
         <div class="col s12 m7">
         <div class="card">
             <div class="card-image">
-            <img src="http://openweathermap.org/img/wn/${weatherDataArray.list[0].weather[0].icon}@4x.png">
+            <img src="https://openweathermap.org/img/wn/${weatherDataArray.list[0].weather[0].icon}@4x.png">
             <span class="card-title blue-text">${weatherDataArray.city.name}</span>
             </div>
             <div class="card-content">
@@ -68,7 +68,7 @@ const getWeatherForWeek = (weatherArray) => {
         <div class="col s12 m7">
         <div class="card">
             <div class="card-image">
-            <img src="http://openweathermap.org/img/wn/${weatherArray[i].weather[0].icon}@4x.png">
+            <img src="https://openweathermap.org/img/wn/${weatherArray[i].weather[0].icon}@4x.png">
             <span class="card-title blue-text">${weatherArray[i].dt_txt}</span>
             </div>
             <div class="card-content">
